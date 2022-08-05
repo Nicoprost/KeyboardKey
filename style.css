@@ -1,0 +1,115 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+}
+.copyright
+{
+    position: relative;
+    width: 75px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.copyright:hover
+{
+    width: 280px;
+    
+}
+.copyright input
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding:10px 25px;
+    outline:none;
+    font-size:1.1em;
+    color: #333;
+    background: linear-gradient(#dbdae1, #a3aaba);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1),
+    15px 15px 15px rgba(0,0,0,0.1),
+    20px 20px 15px rgba(0,0,0,0.1),
+    30px 30px 15px rgba(0,0,0,0.1),
+    inset 2px 2px 2px #a3aaba;  
+}
+p
+{
+    visibility: hidden;
+}
+.copyright:hover input
+{
+    visibility: visible;
+}
+ion-icon
+{
+    position: absolute;
+    right:23px;
+    color:#333;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.copyright input::placeholder
+{
+    color:transparent
+}
+.copyright:hover input::placeholder
+{
+    color:black;
+}
+.copyright::before
+{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 12px;
+    height: 100%;
+    background: linear-gradient(rgb(230, 227, 227), rgb(236, 227, 227), #e3e3e3) ;
+    z-index: 1;
+    filter:blur(1px);
+}
+.copyright::after
+{
+    content: "";
+    position: absolute;
+    top:0;
+    right:-1px;
+    width: 12px;
+    height: 100%;
+    background: #9d9d9d;
+    z-index: 1;
+    filter:blur(1px);
+}
+.shadow
+{
+    position: absolute;
+    top:0;
+    left: -50px;
+    width: calc(100% + 50px);
+    height: 300px;
+    background:  linear-gradient(180deg, rgba(0,0,0,0.1), transparent,transparent);
+    transform-origin: top;
+    transform: skew(45deg);
+}
+.shadow::before
+{
+    content:"";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    z-index: 1;
+}
